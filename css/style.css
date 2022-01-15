@@ -1,0 +1,123 @@
+body{
+    width: 1200px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    background-color:rgb(240, 240, 240)
+}
+
+.header-nav, .main-header, .featured-products{
+    margin: 30px 0;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+.main-header div img, .featured-products div img {
+    width: 100%;
+}
+nav div ul{
+    list-style-type:none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+nav div ul li{
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+nav div ul li:hover{
+    box-shadow: 5px 5px 10px #505050, -5px -5px 10px #505050;
+}
+
+button{
+    background-color: #ff0077;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.star-style{
+    color: gold;
+}
+
+.main-header div img{
+    background-image: url('../images/Circle\ design.svg');
+    background-position: cover;
+}
+
+.bared-logo{
+    margin: 30px 0;
+    /* display: grid; */
+    display: flex;
+    grid-gap: 30px;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 20px;
+    border-top: 2px solid rgb(192, 192, 192);
+    border-bottom: 2px solid rgb(197, 197, 197);
+}
+.bared-logo img{
+    width: 100%;
+}
+.products-container{
+    margin: 30px 0;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.products-container div {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: none; 
+}
+/* .products-container div:hover { */
+     /* box-shadow: 5px 5px 6px 10px; */
+}
+.products-container div img {
+    width: 100%;
+}
+
+footer{
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+.display-block{
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    .main-header, .featured-products, .products-container{
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+    }
+    .header-nav{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+    }
+    .bared-logo{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr)
+    } 
+    .products-container div{
+        text-align: start;
+    }
+    .display-none{
+        display: none;
+    }
+    .display-block{
+        display: block;
+    }
+   
+  } 
+  
+  @media only screen and (max-width: 1200px) {
+    body{
+        width: 100%;
+    }
+  }
